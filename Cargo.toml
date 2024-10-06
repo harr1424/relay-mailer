@@ -2,6 +2,12 @@
 name = "relay-mailer"
 version = "0.1.0"
 edition = "2021"
+description = "Actix Web middleware to rate limit routes"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/relay-mailer/0.1.0/relay-mailer/"
+readme = "README.md"
+repository = "https://github.com/harr1424/relay-mailer"
+keywords = ["email", "relay", "lettre", "actix-web"]
 
 [dependencies]
 actix-web = "4.9.0"
