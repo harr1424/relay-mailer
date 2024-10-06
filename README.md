@@ -4,11 +4,11 @@
 
 ## Setup
 It is necessary to provide a `Config.toml` file containing the following: 
-- user: A string describing the username for the relay server
-- pwd: A string describing the password for the relay server (this will usually be an app password similar to an API key)
-- forward_address: A string describing the email address to forward messages to
-- server: A string describing the server URL matching the username and pwd
-- listen_address: A string describing the address and port the server will listen on
+- user: a string describing the username for the relay server
+- pwd: a string describing the password for the relay server (this will usually be an app password similar to an API key)
+- forward_address: a string describing the email address to forward messages to
+- server: a string describing the server URL matching the username and pwd
+- listen_address: a string describing the address and port the server will listen on
 
 ## Example Config.toml file that matches this schema
 ```toml
@@ -20,11 +20,11 @@ listen_address = "0.0.0.0:8080"
 ```
 
 ## The form data expected by the server is as follows: 
-- name: A string describing the contact's name with a minimum length of 1 and a maximum length of 30
-- country: A string describing the contact's country with a minimum length of 1 and a maximum length of 30
-- email: A string describing the contact's email address that must be a valid email
-- message: A string representation of the contact's message with a minimum length of 1
-- language: An optional string describing the contact's preferred language
+- name: a string describing the contact's name with a minimum length of 1 and a maximum length of 30
+- country: a string describing the contact's country with a minimum length of 1 and a maximum length of 30
+- email: a string describing the contact's email address that must be a valid email
+- message: a string representation of the contact's message with a minimum length of 1
+- language: an optional string describing the contact's preferred language
 
 ## The server is rate limited to four requests per 24 hours by default
 ```rust
