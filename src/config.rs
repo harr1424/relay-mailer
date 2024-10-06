@@ -12,7 +12,7 @@ use std::fs::read_to_string;
 /// # Example Config.toml file that matches this schema
 /// ```toml
 /// user = "bob@mail.com"
-/// pwd = "04 08 0F 10 17 2A""
+/// pwd = "04 08 0F 10 17 2A"
 /// forward_address = "alice@mail.com"
 /// server = "smtp.mail.com" 
 /// listen_address = "0.0.0.0:8080"
