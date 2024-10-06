@@ -1,6 +1,6 @@
 ## relay-mailer 
 
-##### An Actix Web server leveraging the [lettre](https://docs.rs/lettre/latest/lettre/) crate to receive, validate, and sanitize form field data and relay it to an email server. 
+#### An Actix Web server leveraging the [lettre](https://docs.rs/lettre/latest/lettre/) crate to receive, validate, and sanitize form field data and relay it to an email server. 
 
 ## Setup
 It is necessary to provide a `Config.toml` file containing the following: 
