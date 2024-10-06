@@ -1,0 +1,5 @@
+user ="the email address used as a relay"
+pwd = "the password for the relay address"
+forward_address = "the email address the relay should forward to"
+server = "smtp.mail.com" 
+listen_address = "0.0.0.0:8080" 
