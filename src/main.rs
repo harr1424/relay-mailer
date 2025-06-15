@@ -8,17 +8,18 @@ use std::sync::Arc;
 use config::Config;
 use mailing::relay_message;
 
-pub mod form;
 pub mod config;
+pub mod form;
 pub mod mailing;
 
-/// Start the Actix web server and bind it to the listen_address provided in Config.toml. 
+/// Start the Actix web server and bind it to the listen_address provided in Config.toml.
 /// Rate limiting middleware is used to limit individual IP addresses to 4 requests per day.
 #[actix_web::main]
 pub async fn main() -> std::io::Result<()> {
     env_logger::builder().filter_level(LevelFilter::Info).init();
 
-    let config = Config::load_from_file("Config.toml").expect("Failed to load configuration file Config.toml");
+    let config = Config::load_from_file("SecretConfig.toml")
+        .expect("Failed to load configuration file Config.toml");
     let config_arc = Arc::new(config.clone());
 
     let limiter = LimiterBuilder::new()

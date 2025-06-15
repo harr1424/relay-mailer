@@ -1,9 +1,9 @@
-use validator::Validate;
-use serde::Deserialize;
 use ammonia::clean;
+use serde::Deserialize;
+use validator::Validate;
 
 /// A struct describing expected form data and its validation rules
-/// - name: A string describing the contact's name with a minimum length of 
+/// - name: A string describing the contact's name with a minimum length of
 /// 1 and a maximum length of 30
 /// - country: A string describing the contact's country with a minimum length of
 /// 1 and a maximum length of 30
@@ -12,10 +12,10 @@ use ammonia::clean;
 /// - language: An optional string describing the contact's preferred language
 #[derive(Debug, Validate, Deserialize, Clone)]
 pub struct FormData {
-    #[validate(length(min = 1, max = 30))]
+    #[validate(length(max = 30))]
     pub name: String,
 
-    #[validate(length(min = 1, max = 30))]
+    #[validate(length(max = 30))]
     pub country: String,
 
     #[validate(email)]
