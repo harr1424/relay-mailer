@@ -20,7 +20,7 @@ env_logger = "0.11.5"
 actix_route_rate_limiter = "0.2.1"
 chrono = "0.4.38"
 validator = { version = "0.18.1", features = ["derive"] }
-ammonia = "4.0.0"
+ammonia = "4.0.1"
 
 
 [profile.release]
